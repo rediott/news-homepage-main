@@ -1,0 +1,279 @@
+html{
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+    }
+*, *:before, *after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background-color:hsl(36, 100%, 99%);
+    
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 100px;
+}
+
+.open {
+  display: block;
+  cursor: pointer;
+}
+
+.sidenav {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f1f1f1;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sidenav a {
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color:hsl(5, 85%, 63%);
+}
+
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+  
+
+
+  .hero{
+    padding-top:12px;
+    padding-left:18px;
+    padding-right:20px;
+  }
+  .top{
+    content:url("/assets/images/image-web-3-mobile.jpg");
+    width:420px;
+    height:auto;
+  }
+  .bottom{
+    margin-top:18px;
+  }
+  .b-left h1{
+    font-size:58px;
+    color:hsl(240, 100%, 5%);
+  }
+  .b-rigth p{
+    font-size:16px;
+    margin-top:12px;
+    color:hsl(236, 13%, 42%);
+  }
+  .readmore{
+    margin-top:16px;
+    background-color:hsl(5, 85%, 63%);
+    color:white;
+    padding-top:14px;
+    padding-bottom:14px;
+    padding-left:32px;
+    padding-right:32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+  }
+  .right{
+    margin-top:40px;
+    width:380px;
+    height:auto;
+    background-color:hsl(240, 100%, 5%);
+    padding:20px;
+    margin-bottom:90px;
+    
+  }
+  .right > h2{
+    color:hsl(35, 77%, 62%);
+    
+  }
+
+  .newsline{
+    margin-top:24px;
+  }
+  .newsline h2{
+    margin-bottom:12px;
+    color:white;
+  }
+  .newsline p{
+    margin-bottom:24px;
+    color:hsl(36, 100%, 99%);
+
+  }
+  .line{
+    width: 380px;
+    height: 0;
+    border: 1px solid #C4C4C4;
+    margin: 3px;
+    display:inline-block;
+    margin-bottom:24px;
+  }
+  .carousel{
+    margin-bottom:36px;
+  }
+  .card{
+    display:flex;
+    padding:20px;
+    
+  }
+  .card img{
+    float:left;
+  
+    margin-right:16px;
+  }
+  .c_left h3{
+    color:hsl(233, 8%, 79%);
+    font-size: 56px;
+    margin-bottom:16px;
+  }
+  .c_left h2{
+    margin-bottom:16px;
+  }
+  .c_left p{
+    color:hsl(236, 13%, 42%);
+  }
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+
+  @media (min-width:768px){
+    .hero{
+      display:flex;
+      height:680px;
+    }
+    .bottom{
+      height:50%;
+      display:flex;
+    }
+    .top{
+     height:50%;
+     width:95%;
+     object-fit: cover;
+     
+    }
+    .right{
+      margin-top:0px;
+      height:70%;
+    }
+    .b-rigth {
+      padding-right:36px;
+      font-size:20px;
+      line-height: 32px;
+    }
+    .b-rigth button{
+      margin-top:40px;
+    }
+    .carousel{
+      margin-top:-42px;
+      display:flex;
+    }
+    .newsline h2:hover{
+      cursor: pointer;
+      color:hsl(35, 77%, 62%);
+    }
+    .readmore:hover{
+      cursor: pointer;
+      background-color:hsl(240, 100%, 5%);
+      color:white;
+    }
+    .c_left h2:hover{
+      cursor: pointer;
+      color:hsl(5, 85%, 63%);
+    }
+   
+    .navbar {
+      flex-direction: row;
+    }
+
+    .logo {
+      width: auto;
+    }
+
+    .open {
+      display: none;
+    }
+
+    .sidenav {
+      z-index: 1;
+      height: auto;
+      width: auto;
+      position: relative;
+      background-color: transparent;
+      transition: none;
+    }
+
+    .sidenav a {
+      display: inline-block;
+      padding: 0 10px;
+      font-size: 16px;
+      color: black;
+      
+    }
+    .sidenav a:hover{
+      color:hsl(5, 85%, 63%);
+    }
+
+    .closebtn {
+      pointer-events: none;
+      cursor: default;
+      text-decoration: none;
+      opacity:0;
+    }
+    .open {
+      display: none;
+    }
+    @media screen and (min-width: 769px) {
+      .sidenav {
+        position: static;
+        width: auto;
+        height: auto;
+        overflow: visible;
+        transition: none;
+        padding-top: 0;
+        left: 0;
+      }
+      
+      .open {
+        display: none;
+      }
+      
+      .closebtn {
+        display: none;
+      }
+  }
+    
+
+  
